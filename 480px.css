@@ -1,0 +1,38 @@
+#clockContainer {
+    height: 30vw;
+    width: 30vw;
+    left: 35vw;
+}
+
+.DigitalClock {
+    font-size: 1rem;
+    padding: 0.3rem;
+}
+
+.quizBox {
+    margin: 55vw auto;
+    width: 95vw;
+}
+
+.Modalbtn {
+    top: 89vh;
+    border-radius: 50% 50% 0 0;
+    left: 30%;
+}
+
+.calcbtn {
+    top: 87vh;
+    border-radius: 50% 50% 0 0;
+    left: 50%;
+}
+
+.Modalimg {
+    width: 40px;
+}
+
+.modalForinstruction {
+    width: 70vw;
+    margin: auto;
+    overflow: hidden;
+    left: 5vw;
+}

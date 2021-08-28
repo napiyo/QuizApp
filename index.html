@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- adding css and js files -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="480px.css" />
+    <script src="script.js" defer></script>
+
+    <link rel="shortcut icon" href="statics/fav_icon.png" type="image/x-icon">
+</head>
+<!-- main content starts -->
+
+<header>
+    <h3>Best of luck for your Quiz</h3>
+    <span>
+
+           <p class="info">20-7-2021  - 
+           <a href="https://github.com/napiyo/Mini-Projects/tree/master/JavaScript/quiz%20app" target="_blank" rel="noopener noreferrer">Narendra Dewasi</a>
+        </p>
+        </span>
+
+</header>
+<!-- showing clock -->
+<div id="clockContainer">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+
+    <!-- counter  -->
+    <h2 class="DigitalClock">Time</h2>
+</div>
+<!-- authentication block. hidden after log in  -->
+<div class="quizBox">
+    <div class="aunthetication">
+        <h2>Please Enter password to take this Quiz</h2>
+        <p>password is 123</p>
+
+        <div class="alertForWrongPassword">
+            You typed Wrong Password.
+            <span class="closeAlertBtn" onclick="this.parentElement.style.display='none';">&times</span>
+        </div>
+
+        <div class="pass"> <input type="password" id="password"><img class="eyeIcon" src="https://img.icons8.com/ios-glyphs/30/000000/angry-eye.png" /></div>
+        <button class="takeQuiz" disabled>Start Quiz</button>
+    </div>
+
+
+    <!-- question container visible only after log in -->
+    <div class="questionContainer">
+        <!-- display question -->
+        <h2 class="question">Questiondsfsadfasdfsdffdgasdfgds Text</h2>
+        <span style="padding-left: 20px;">points- <span id=marksForEachQuestion></span></span>
+        <ul class="optionlist">
+            <!-- options for answers -->
+            <li>
+                <input type="radio" name="options" id="1" value="1">
+                <label for="optionA" id="optionAText">OptionA</label>
+            </li>
+            <li>
+                <input type="radio" name="options" id="2" value="2">
+                <label for="optionB" id="optionBText">OptionB</label>
+            </li>
+
+            <li>
+                <input type="radio" name="options" id="3" value="3">
+                <label for="optionC" id="optionCText">OptionC</label>
+            </li>
+            <li>
+                <input type="radio" name="options" id="4" value="4">
+                <label for="optionD" id="optionDText">OptionD</label>
+            </li>
+
+        </ul>
+        <!-- if not slected any anser -->
+        <div class="PleaseSelectAnswer">
+            Please Select Answer
+        </div>
+        <!-- show next question -->
+        <button id="nextbtn">Next</button>
+    </div>
+</div>
+<!-- button for instructions -->
+<div class="Modalbtn">
+    <div><img src="statics/fav_icon.png" alt="loading" class="Modalimg" srcset=""></div>
+</div>
+<!-- calculator -->
+<div class="calcbtn">
+    <div><img src="statics/calc.png" alt="loading" class="Modalimg" srcset=""></div>
+</div>
+<!-- instruction modal -->
+<div class="modalForinstruction">
+    <div class="closeModalbtn">&times</div>
+    <ol>
+        <li style="background-color: red; color: white;">DO NOT CHANGE TABS OR MINIMIZE THE WINDOW</li>
+        <li>TIME FOR TEST IS ONLY 2 MIN</li>
+        <li>YOU CAN USE CALCULATOR , CLICK ON CALCULATOR ICON</li>
+        <li>ANALOG CLOCK SHOWS CURRENT TIME</li>
+    </ol>
+</div>
+<!-- Adding Calculater -->
+<div class="container">
+    <div class="header">
+        Click here to move<span id="closecalc">&times;</span></div>
+
+    <div class="claculater">
+
+        <div class="screen">
+        </div>
+        <div class="keypad">
+            <div class="numeric">
+
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>.</button>
+                <button>0</button>
+                <button id="backspace"><img id="backspaceImg" src="https://img.icons8.com/ios-glyphs/30/000000/backspace.png"/></button>
+            </div>
+            <div class="operators">
+
+                <button>*</button>
+                <button>/</button>
+                <button>+</button>
+                <button>-</button>
+                <button id="equalbtn">=</button>
+                <button>AC</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+<!-- if  -->
+<div id=malpractice>
+    <div>close</div>
+    its first and last warning if you minimize or change tab again you'll be disqulified.
+</div>
+</body>
+
+</html>

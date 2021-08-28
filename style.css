@@ -1,0 +1,400 @@
+/* using goole fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
+    /* remove default padding and margin  */
+    margin: 0;
+    max-width: 100vw;
+    padding: 0;
+}
+
+body {
+    /* using gradient in backgroud  */
+    background-image: linear-gradient(to right top, #796bd1, #5d85e2, #469cea, #44b0ec, #5ac2ea, #63c7eb, #6dcceb, #76d1ec, #6bccf0, #63c7f4, #5fc1f8, #5fbbfb);
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+
+header {
+    background: rgb(7, 6, 57);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 13px -1px black;
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
+
+/* this will be area where quesions will be displayed  */
+
+.quizBox {
+    background: white;
+    width: 600px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: -5px -5px 15px rgb(109, 163, 182);
+}
+
+.questionContainer {
+    padding-top: 2rem;
+    display: none;
+}
+
+.question {
+    text-align: center;
+}
+
+.questionContainer ul {
+    list-style: none;
+    padding: 1.5rem;
+    line-height: 30px;
+}
+
+#nextbtn {
+    border: none;
+    background: rgb(7, 6, 57);
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.aunthetication {
+    text-align: center;
+    padding: 3rem 0 0 0;
+}
+
+.pass {
+    position: relative;
+    margin: 2rem auto;
+    display: inline-block;
+}
+
+#password {
+    /* display: block; */
+    border: 1px solid rgb(54, 51, 238);
+    min-width: 300px;
+    border-radius: 3px;
+    height: 25px;
+    padding: 5px 20px;
+}
+
+#password:focus {
+    box-shadow: 0 0 10px 3px rgba(54, 51, 238, 0.589);
+}
+
+.takeQuiz {
+    border: none;
+    background: rgb(54, 51, 238);
+    color: white;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.takeQuiz:disabled {
+    background: rgba(21, 17, 218, 0.568);
+    cursor: not-allowed;
+}
+
+.alertForWrongPassword {
+    background: rgba(255, 0, 0, 0.651);
+    padding: 10px 20px;
+    margin: 10px 30px;
+    color: white;
+    display: none;
+}
+
+.closeAlertBtn {
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.closeAlertBtn:hover {
+    color: black;
+    scale: 2;
+    transform: rotateZ(90deg);
+}
+
+.eyeIcon {
+    position: absolute;
+    right: 3px;
+    top: 6px;
+    z-index: 3;
+    width: 25px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+.results {
+    min-height: 300px;
+    padding: 10rem;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.PleaseSelectAnswer {
+    background: rgba(252, 252, 12, 0.589);
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+
+/* clock */
+
+#clockContainer {
+    position: absolute;
+    margin: auto;
+    top: 76px;
+    left: 55px;
+    height: 150px;
+    /*to make the height and width responsive*/
+    width: 150px;
+    background: url(statics/clock.png) no-repeat;
+    /*setting our background image*/
+    background-size: 100%;
+    border-radius: 50%;
+    box-shadow: -4px -4px 15px #7cdeff, 4px 4px 15px #329abd;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+}
+
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
+}
+
+.DigitalClock {
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: -4px -4px 15px #7cdeff, 4px 4px 15px #329abd;
+}
+
+.modalForinstruction {
+    width: 50%;
+    text-align: start;
+    margin: auto;
+    background-color: rgb(230, 214, 214);
+    padding: 40px;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    display: block;
+    border: #329abd 2px solid;
+    z-index: 5;
+    left: 25%;
+}
+
+.modalForinstruction ol {
+    list-style-position: inside;
+}
+
+.closeModalbtn {
+    float: right;
+    cursor: pointer;
+    margin-top: -20px;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.closeModalbtn:hover {
+    transform: rotateZ(90deg);
+}
+
+.calcbtn {
+    cursor: pointer;
+    background: rgba(7, 6, 57, 0.541);
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 0 0 50%;
+    padding: 10px;
+    padding-top: 10px;
+    transition: all 0.3s;
+    margin-top: 10px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transition: all 0.3s;
+}
+
+.Modalbtn {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: calc(50% + 90px);
+    transition: all 0.3s;
+    height: 50px;
+    background: rgba(7, 6, 57, 0.541);
+    width: 50px;
+    border-radius: 50% 0 0 50%;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.Modalbtn:hover,
+.calcbtn:hover {
+    width: 80px;
+    background: rgb(7, 6, 57);
+}
+
+.Modalimg {
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+/* Calculater */
+
+.container {
+    background: rgb(27, 98, 204);
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 10;
+    display: none;
+}
+
+.header {
+    color: white;
+    background: rgb(124, 124, 236);
+    box-shadow: inset 0 3px 15px black;
+    cursor: move;
+    text-align: end;
+}
+
+.header span {
+    cursor: pointer;
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 5px;
+    margin-left: 50px;
+}
+
+.claculater {
+    padding: 30px;
+    padding-top: 5px;
+}
+
+.screen {
+    text-align: end;
+    width: 100%;
+    background: white;
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    border: 1px solid black;
+    min-height: 29px;
+    font-size: 25px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.numeric {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+}
+
+.numeric button {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#backspace {
+    padding: 2px;
+}
+
+#backspace img {
+    width: 20px;
+}
+
+.operators {
+    display: grid;
+    margin-left: 5px;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    grid-template-rows: auto auto auto;
+}
+
+#equalbtn {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background: rgb(138, 67, 27);
+}
+
+.operators button {
+    cursor: pointer;
+    font-size: 28px;
+    border-radius: 5px;
+    border: none;
+}
+
+#malpractice {
+    background-color: red;
+    width: 80%;
+    padding: 10px 40px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    z-index: 999;
+    display: none;
+    border: white 2px solid;
+    box-shadow: 2px 2px 25px 10px black;
+}
+
+#malpractice div {
+    float: right;
+    cursor: pointer;
+}
