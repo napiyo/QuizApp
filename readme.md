@@ -1,5 +1,5 @@
 # Quiz App in javaScript   
-created by Narendra Dewasi [radioactivenarendra@gmail.com](mailto:radioactivenarendra@gmail.com)
+created by Narendra Dewasi [radioactivenarendra@gmail.com](mailto:radioactivenarendra@gmail.com) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visit for preview-  <https://napiyo.github.io/QuizApp/>
 ****
 ## Features
 >### if you minimize or change tab for first time it will show warning. and for second time if you do same. you will disqulified.  
